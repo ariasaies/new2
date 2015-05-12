@@ -1,0 +1,78 @@
+
+package javaapplication126;
+import java.util.Scanner;
+ interface sinformation {
+    public void add(String student);
+    public String view(String student);
+}
+ interface course{
+public void setname(String n);
+public String getname();
+
+public void setlastname(String ln);
+public String getlastname();
+public void setID(int i);
+public int getID();
+} 
+class grade implements course,isinformation{
+    private String name;
+    private String lastname;
+    private int ID;
+    private String gradde;
+    grade(String n,String ln,int i,String g){
+        name=n;
+        lastname=ln;
+        ID=i;
+        gradde=g;
+        
+    }
+    public void setname(String n){
+        name=n;
+        
+    }
+    public String getname(){
+        return name;
+    }
+    public void setlastname(String ln){
+        lastname=ln;
+    }
+    public String getlastname() {
+    return lastname;
+    
+}
+    public void setID(int i){
+        ID=i;
+        
+    }
+    public int getID(){
+        return ID;
+    }
+    public void add(String student){
+        name=student;
+    }
+    public String view(String student){
+        return name;
+    }
+    
+}
+public class run {
+
+   
+    public static void main(String[] args) {
+        grade g=new grade("ahmad","ahmadi",2,"first");
+   System.out.println("student name"+g.getname());
+   System.out.println("student last name"+g.getlastname());
+   System.out.println("student ID"+g.getID());
+   
+    Scanner s =new Scanner(System.in);
+    System.out.println("neter a name");
+    String name=s.nextLine();
+    System.out.println("neteryour lastname");
+    String lastname=s.nextLine();
+    System.out.println("neter your ID");
+    int ID=s.nextInt();
+    System.out.println("neter the grade");
+    String grade=s.nextLine();
+}
+}
+
